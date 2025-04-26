@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'com.demo'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    archiveBaseName.set('demo-microservice')
+    archiveVersion.set('1.0.0')
+}
