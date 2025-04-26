@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh './gradlew clean build'
+                bat './gradlew clean build'
             }
         }
         stage('Fake Upload to Artifactory') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Run DemoService') {
             steps {
-                sh 'java -cp build/classes/java/main DemoService'
+                bat 'java -cp build/classes/java/main DemoService'
             }
         }
     }
